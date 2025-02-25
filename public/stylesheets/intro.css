@@ -1,0 +1,86 @@
+
+.transition-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: 6s ease-in-out;
+    
+  }
+  .welcome {
+    transition: 1s ease-in-out;
+    z-index: 1003;
+    color: gray;
+    text-align: center;
+    opacity: 0;
+  }
+  
+  #delayedText {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Make <p> visible when the class "visible" is added */
+  #delayedText.visible {
+    opacity: 1;
+  }
+  
+  .welcome.is-active  {
+    opacity: 1;  
+  }
+  
+  .transition-1.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .center-text {
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;  /* Fade in transition */
+  }
+  
+.transition {
+  
+  position: relative; /* Relative positioning for stacking context */
+  z-index: 1000; /* Ensure content is above the background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center content vertically */
+  align-items: center;      /* Center content horizontally */
+  height: 100vh;            /* Full viewport height */
+  text-align: center;       /* Center text inside the container */
+ }
+ 
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  opacity: 1;  
+  transition: opacity 1.5s ease-in-out; 
+  z-index: 900;
+}
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* When the 'hide' class is added, fade out */
+#intro.hide {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction while fading */
+}
+
+

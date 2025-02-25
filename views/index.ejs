@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+    <title>Password Pet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="fade-overlay"></div>
+<!-----------navbar---------------------------->
+    <%- include('./partials/navbar.ejs') %>
+
+<!-----------password strength meter----------->
+    <div class="group">
+    <div class="main">
+        <h1 class="custom_h1">Password Pet</h1>
+        <h3>Enter your login credentials</h3>
+
+        <form action="">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button class="custom_button" type="submit">
+                    Check Your Pet's Password strength
+                </button>
+            </div>
+            <label for="">
+                Strength of password
+            </label>
+          <div class="power-container">
+              <div id="power-point"></div>
+          </div>
+
+            <div class="wrap">
+                <button class="custom_button" type="submit">
+                    Submit
+                </button>
+            </div>
+            </div>
+        </form>
+</div>
+    <div class="main" id="helptx">
+        <form>
+            <p class="custom_placeholder">Password guidance:</p>
+        </form>
+    </div>
+    <div class="main" id="animalbox">
+        <form>
+            <p class="custom_placeholder">Your Dragon:</p>
+            <p class="custom_placeholder">Level:</p>
+        </form>
+    </div>
+    
+   <script src="/javascripts/script.js"></script>
+
+<!------------lottie butterfly------------>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/a1c46ea0-d213-4433-b7f8-8dccd70b4fa5/pnfFYlpB8h.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" class="animation-top-right" loop autoplay></dotlottie-player>
+</body>
 </html>
