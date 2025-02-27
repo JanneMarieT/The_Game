@@ -116,20 +116,25 @@ body {
 
 #helptx {
   position: fixed;
-  top:230px;
-  right: 50px;
-  width: 200px;
-  height:250px;
+  top:215px;
+  right: 180px;
+  width: 400px;
+  height:500px;
   z-index: 500;
 }
 
 #animalbox {
   position: fixed;
-  top:230px;
-  left: 50px;
-  width: 200px;
-  height:250px;
+  top:215px;
+  left: 180px;
+  width: 400px;
+  height:500px;
   z-index: 500;
+}
+
+
+.custom_placeholder {
+  text-align: center; /* Ensure text stays centered */
 }
 
 /* Black overlay covering entire screen */
@@ -148,4 +153,42 @@ body {
 #fade-overlay.hide {
   opacity: 0;
   pointer-events: none;
+}
+
+        /* Center carousel and make it smaller */
+    /*    #carouselExampleControls {
+          max-width: 300px;
+          margin: auto;
+      }*/
+
+      /* Adjust carousel images */
+      .carousel-item img {
+          width: 100%;
+          height: auto;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+      /* Grey out side images */
+      .carousel-item-next,
+      .carousel-item-prev,
+      .carousel-item.active {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .carousel-item-next img,
+      .carousel-item-prev img {
+          transform: scale(0.8);
+          opacity: 0.5;
+      }
+
+      /* Center image is normal */
+      .carousel-item.active img {
+          transform: scale(1);
+          opacity: 1;
+      }
+      #carouselExampleControls {
+  max-width: 60px; /* Adjust as needed */
+  margin: auto;
 }
