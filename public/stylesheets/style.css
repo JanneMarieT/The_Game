@@ -114,6 +114,7 @@ input {
   border-radius: 5px;
   transition: 0.5s;
 }
+
 /*butterfly*/
 .animation-top-right {
   position: fixed; 
@@ -123,6 +124,7 @@ input {
   height: 100px;
   z-index: 1000; 
 }
+
 /*form helptext*/
 #helptx {
   position: fixed;
