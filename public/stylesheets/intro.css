@@ -83,4 +83,12 @@ body {
   pointer-events: none; /* Prevent interaction while fading */
 }
 
-
+/*butterfly*/
+.animation-top-right {
+  position: fixed; 
+  top: 10px; 
+  right: 10px; 
+  width: 100px; 
+  height: 100px;
+  z-index: 1000; 
+}
