@@ -15,11 +15,11 @@ password.oninput = function () {
 
     // Define image sources for different strength levels
     let imageSources = [
-        "../images/egg1.png" ,   // Red - Very Weak
-        "../images/dragon1.png",        // Orange - Weak
-        "../images/dragon7.png",      // Yellow - Medium
-        "../images/dragon6.png",      // Light Green - Strong
-        "../images/dragon3.png",  // Dark Green - Very Strong
+        "../images/EGG_fire.png" ,   // Red - Very Weak
+        "../images/EGG_fire1.png",        // Orange - Weak
+        "../images/EGG_fire2.png",      // Yellow - Medium
+        "../images/EGG_fire3.png",      // Light Green - Strong
+        "../images/EGG_fire4.png",  // Dark Green - Very Strong
     ];
 
     if (value.length >= 6) {
