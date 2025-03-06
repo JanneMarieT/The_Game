@@ -4,6 +4,8 @@ let password = document.getElementById("password");
 let power = document.getElementById("power-point");
 let strengthImage = document.getElementById("strength_img");
 let help_txt = document.getElementById("help_text");
+let lv_icon = document.getElementById("level_icon");
+
 
 password.oninput = function () {
     let point = 0;
@@ -22,6 +24,14 @@ password.oninput = function () {
         "../images/EGG_fire4.png",  // Dark Green - Very Strong
     ];
 
+    let Icon_level = [
+        "bi bi-0-square-fill fs-1",
+        "bi bi-1-square-fill fs-1",
+        "bi bi-2-square-fill fs-1",
+        "bi bi-3-square-fill fs-1",
+        "bi bi-4-square-fill fs-1",
+    ]
+
     if (value.length >= 6) {
         let arrayTest = 
             [/[0-9]/, /[a-z]/, /[A-Z]/, /[^0-9a-zA-Z]/];
@@ -34,6 +44,7 @@ password.oninput = function () {
     power.style.width = widthPower[point];
     power.style.backgroundColor = colorPower[point];
     strengthImage.src = imageSources[point];
+    lv_icon.className = Icon_level[point];
     fetch('./text/helptext.json')
     .then(response => response.json())
     .then(data => {

@@ -142,13 +142,33 @@ input {
   height:320px;
   z-index: 500;
 }
+
 /*form animal*/
 #animalbox {
   position: fixed;
-  top:80px;
+  top:180px;
   left: 100px;
   width: 900px;
-  height: 800px;
+  height: 700px;
+  z-index: 500;
+}
+
+#Level_box {
+  position: fixed;
+  top: 80px;
+  width:187px;
+  left: 810px;
+  height: 80px;
+}
+
+
+
+#carusel_box {
+  position: fixed;
+  top: 80px;
+  width: 700px;
+  height: 80px;
+  left: 100px;
   z-index: 500;
 }
 
@@ -158,8 +178,12 @@ input {
     height: auto;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
+.fit_size {
+  height: 500px;
+  width: auto;
+  object-fit: cover;
+} 
 
-/* Grey out side images */
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
@@ -174,12 +198,11 @@ input {
     opacity: 0.5;
 }
 
-/* Center image is normal */
 .carousel-item.active img {
     transform: scale(1);
     opacity: 1;
 }
 #carouselExampleControls {
-max-width: 60px; /* Adjust as needed */
+max-width: 190px; /* Adjust for egg size(the whole carusel now) */
 margin: auto;
 }

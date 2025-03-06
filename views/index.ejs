@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -20,35 +21,64 @@
 <!-----------password strength meter----------->
 
 <!-----------animalbox------------------------->
-   <div class="main" id="animalbox">
-        <section id="iconEgg" class="text-center">
-            <div id="carouselExampleControls" class="carousel slide mx-auto" data-bs-ride="carousel">
+  <!-- <div class="main" id="carusel_box">-->
+        <section id="carusel_box" class="main text-center">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg0.png" alt="Egg0">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./images/eggis11.png" alt="Egg0">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/eggis1.png" alt="Egg1">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/eggis2.png" alt="Egg2">
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg1.png" alt="Egg1">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./images/eggis3.png" alt="Egg3">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/eggis4.png" alt="Egg4">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/eggis5.png" alt="Egg5">
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg2.png" alt="Egg2">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img  src="./images/eggis6.png" alt="Egg6">
+                            </div>
+                            <div class="col-md-4">
+                                <img  src="./images/eggis7.png" alt="Egg7">
+                            </div>
+                            <div class="col-md-4">
+                                <img  src="./images/eggis8.png" alt="Egg5">
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg3.png" alt="Egg3">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg4.png" alt="Egg4">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg5.png" alt="Egg5">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/egg6.png" alt="Egg6">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="rounded-circle d-block mx-auto" src="./images/EGG_fire.png" alt="Egg7">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img  src="./images/eggis9.png" alt="Egg6">
+                            </div>
+                            <div class="col-md-4">
+                                <img  src="./images/eggis10.png" alt="Egg7">
+                            </div>
+                            <div class="col-md-4">
+                                <img  src="./images/eggis12.png" alt="Egg5">
+                            </div>
+                        </div>
                     </div>
                 </div>
+            
         
                 <!-- Navigation Buttons -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -62,13 +92,22 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        
-            <!-- Image & Text Below the Carousel -->
+        </section>
+    
+    <section class="main" id="Level_box">
+        <div class="mt-2 d-flex align-items-center">
+            <h2 class="custom_placeholder me-3">Level:</h2>
+            <i id="level_icon" class="bi bi-0-square-fill fs-1"></i>
+        </div>
+    </section>
+
+    <!-- Image & Text Below the Carousel -->
+    <div class="main" id="animalbox">
+        <section>
             <div class="mt-4 text-center">
-                <p class="custom_placeholder">Your Dragon:</p>
+                <h2 class="custom_placeholder">Your Dragon:</h2>
                 <div class="strength_container">
-                    <img id= "strength_img" src="./images/EGG_fire.png" alt="Dragon" height="450" class="d-block mx-auto">
-                    <p class="custom_placeholder">Level:</p>
+                    <img id= "strength_img" src="./images/EGG_fire.png" alt="Dragon" height="450">
                 </div>
             </div>
             <div class="main group">
@@ -83,8 +122,9 @@
         <section>
             <div class="main " id="helptx">
                 <form>
-                    <h2 class="custom_placeholder">Password guidance:</h2>
-                    <p id="help_text" class="center-text custom_placeholder">Welcome to Password Pet, I will guide you on how to create a strong and secure password"</p>
+                    <h2 class="mt-4">Password guidance:</h2>
+                    <p id="help_text" class="mt-4 center-text custom_placeholder">Welcome to Password Pet, I will guide you on how to create a strong and secure password</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, esse assumenda sunt mollitia saepe harum omnis et ex natus officia ipsum alias. Inventore minima, atque mollitia nemo expedita impedit quas!</p>
                 </form>
             </div>
         </section>
