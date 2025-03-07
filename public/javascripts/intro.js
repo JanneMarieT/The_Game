@@ -1,4 +1,18 @@
-
+let audio = document.getElementById("backgroundAudio");
+        let soundBtn = document.getElementById("soundToggle");
+        let isPlaying = false;
+    
+        soundBtn.addEventListener("click", function () {
+            if (!isPlaying) {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+                soundBtn.textContent = "🔊"; // Sound on icon
+            } else {
+                audio.pause();
+                soundBtn.textContent = "🔇"; // Mute icon
+            }
+            isPlaying = !isPlaying;
+        });
+        
 //redirect to main page - creates a session, so intro does not open again if refreshed
 setTimeout(() => {
     localStorage.setItem("introShown", "true"); // Store in localStorage
@@ -41,3 +55,4 @@ window.onload = () => {
         transition_el.classList.remove('is-active');
     }, 14000);
 }
+
