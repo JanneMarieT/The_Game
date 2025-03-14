@@ -1,3 +1,4 @@
+//audio
 let audio = document.getElementById("backgroundAudio");
         let soundBtn = document.getElementById("soundToggle");
         let isPlaying = false;
@@ -5,21 +6,15 @@ let audio = document.getElementById("backgroundAudio");
         soundBtn.addEventListener("click", function () {
             if (!isPlaying) {
                 audio.play().catch(error => console.log("Autoplay blocked:", error));
-                soundBtn.textContent = "🔊"; // Sound on icon
+                soundBtn.textContent = "🔊"; 
             } else {
                 audio.pause();
-                soundBtn.textContent = "🔇"; // Mute icon
+                soundBtn.textContent = "🔇"; 
             }
             isPlaying = !isPlaying;
         });
-        
-//redirect to main page - creates a session, so intro does not open again if refreshed
-setTimeout(() => {
-    localStorage.setItem("introShown", "true"); // Store in localStorage
-    window.location.href = "/index"; // Redirect to the main page
-}, 13000);
 
-//welcome text typed
+//welcome text
 const text = "Ready to embark on a legendary quest to protect your digital kingdom?"
     let i = 0;
  
@@ -30,29 +25,32 @@ const text = "Ready to embark on a legendary quest to protect your digital kingd
            setTimeout(type, 50); 
         }
     }
-    
+
 //welcome text timeout    
 setTimeout(type, 1000);
 
 setTimeout(function() {
-    document.getElementById("delayedText").classList.add('visible'); // Add class to reveal <p>
+    document.getElementById("delayedText").classList.add('visible'); 
 }, 5000);
-setTimeout(function() {
-    document.getElementById("delayedText").classList.remove('visible'); // Add class to reveal <p>
-}, 11800);
 
-window.onload = () => {
 
-    const transition_el = document.querySelector('.transition');
-    const text_elements = document.querySelectorAll('.welcome')
+document.addEventListener("DOMContentLoaded", function () {
+    const int = document.getElementById("intro");
+    const continueButton = document.getElementById("continueButton");
    
-
+    
+    // Show the "Continue" button after the text is visible
     setTimeout(() => {
-        text_elements.forEach(el => el.classList.remove('is-active'));
-    }, 12000);
+        continueButton.classList.add('visible');
+    }, 7000);
+    
+    
+    continueButton.addEventListener("click", function () {
+        int.classList.add('hide')
 
-    setTimeout(() => {
-        transition_el.classList.remove('is-active');
-    }, 14000);
-}
-
+        setTimeout(() => {
+            localStorage.setItem("introShown", "true"); 
+            window.location.href = "/index"; 
+        }, 1000); 
+    });
+});
