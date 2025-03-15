@@ -16,9 +16,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/guidance">Guidance</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
+                <% if (user && user.username) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" id="welcome"> Welcome </br> <%=user.username%> </a>
+                    </li>
+                    <% } %>
+                    <% if (!user || !user.username) { %>
+                        <li class="nav-item">
+                            <a class="nav-link" id="welcome"> Welcome </br> Guest </a>
+                        <% } %>
             </ul>
         </div>
     </div>

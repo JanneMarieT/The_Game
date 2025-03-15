@@ -16,7 +16,7 @@
 <body>
     <div id="fade-overlay"></div>
 <!-----------navbar---------------------------->
-    <%- include('./partials/navbar.ejs') %>
+    <%- include('./partials/navbar.ejs', {user: user}) %>
 
 <!-----------password strength meter----------->
 
@@ -133,16 +133,17 @@
             <div class="password">
                 <div class="main group">
                     <h1 class="custom_h1">Password Pet</h1>
-                    <h3>Enter your login credentials</h3>
-                    <form action="">
+                
+                    <form action="/test" method="POST">
                         <label for="first">Username:</label>
-                        <input type="text" id="first" name="first" placeholder="Enter your Username" required>
+                        <input type="text" id="first" name="username" placeholder="Enter your Username" required>
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" placeholder="Enter your Password" required>
                         <div class="wrap">
                             <button class="custom_button" type="submit">Submit</button>
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </section>

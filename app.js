@@ -10,8 +10,13 @@ var users = require('./routes/users');
 var intro = require('./routes/intro');
 var about = require('./routes/about');
 var guidance = require('./routes/guidance');
+var test = require('./routes/test');
+var final_stage = require('./routes/final_stage');
 
 var app = express();
+var session = require('express-session');
+app.use(express.urlencoded({ extended: true })); // Middleware to parse form data
+app.use(express.json());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,11 +30,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'keyboard kat', // Change this to a strong secret
+  resave: false,
+  saveUninitialized: true
+}));
+
+
 app.use('/', intro);
 app.use('/index', index);
 app.use('/users', users);
 app.use('/about', about);
 app.use('/guidance', guidance);
+app.use('/test', test);
+app.use('/final_stage', final_stage);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
