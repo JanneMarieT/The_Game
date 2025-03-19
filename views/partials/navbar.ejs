@@ -18,12 +18,12 @@
                 </li>
                 <% if (user && user.username) { %>
                     <li class="nav-item">
-                        <a class="nav-link" id="welcome"> Welcome </br> <%=user.username%> </a>
+                        <a class="nav-link" id="welcome"> Welcome <%=user.username%> </a>
                     </li>
                     <% } %>
                     <% if (!user || !user.username) { %>
                         <li class="nav-item">
-                            <a class="nav-link" id="welcome"> Welcome </br> Guest </a>
+                            <a class="nav-link" id="welcome"> Welcome Guest </a>
                         <% } %>
             </ul>
         </div>

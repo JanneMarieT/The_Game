@@ -10,11 +10,14 @@ router.post('/', (req, res) => {
     const { password } = req.body;
   
     if (req.session.password === password) {
-      // If the password matches, send a success response
       res.redirect('/final_stage')
     } else {
-      // If the password does not match, send an error response
-      res.render('test', {user: null})
+        req.session.destroy((err) => {
+            if (err) {
+                console.error("Session destruction error:", err);
+            }
+            res.render('test', { user: null }); // User is now "Guest"
+        });
     }
 });
 
