@@ -47,7 +47,7 @@ body {
   width: 500px;
   z-index: 500;
 }
-
+/*
 input {
   display: block;
   width: 100%;
@@ -56,7 +56,7 @@ input {
   box-sizing: border-box;
   border: 1px solid white;
   border-radius: 5px;
-}
+}*/
 
 .custom_button {
   padding: 15px;
@@ -69,6 +69,35 @@ input {
   background-color: #77bef1ee;
   width: 100%;
   font-size: 16px;
+}
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 1px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+.eye-icon:hover {
+  color: #333;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
 }
 
 .wrap {

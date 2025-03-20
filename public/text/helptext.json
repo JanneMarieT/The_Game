@@ -1,17 +1,17 @@
 {
     "0": {
-        "text":"Welcome to Password Pet, I will guide you on how to create a strong and secure password"
+        "text":"To make a password les guessable and more secure against brute force attacks, and dictionary attacks the number of characters must be at least above 8! How long a password can you make and still remmember?"  
     },
     "1": {
-        "text":"Lorem"
+        "text":"Make atleast one character capital! To avoid bad habits of capitalising only the first letter, try to use more than one capital letter and implement them into the password word or words. for example: BlueBerries"
     },
     "2": {
-        "text":"Lorem"
+        "text":"Greate, keep up the good work! <br> Lets add in a number and remmember to not use anything date specific! <br> Instead try and implement a number into the context of you choosen password, for example: Blu3Berries"
     },
     "3": {
-        "text":"Lorem"
+        "text":"Wow look at your dragon! its growing big! Now can you add in an special character? Here an easy way of implementing special characters is to use one or two that somewhat looks like a character in your chosen word or string. For example: Blu3Berr!es "
     },
     "4": {
-        "text":"Lorem"
+        "text":"CONGRATULATION! Your Pet dragon has reached full maturity and are now at final stage! Press the submit button and test your ability to remmember the password you have choosen"
     }
 }

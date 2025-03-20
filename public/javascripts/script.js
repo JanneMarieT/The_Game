@@ -1,4 +1,5 @@
 
+
 //password validation
 let password = document.getElementById("password");
 let power = document.getElementById("power-point");
@@ -18,18 +19,18 @@ password.oninput = function () {
     // Define image sources for different strength levels
     let imageSources = [
         "../images/EGG_fire.png" ,   // Red - Very Weak
-        "../images/EGG_fire1.png",        // Orange - Weak
-        "../images/EGG_fire2.png",      // Yellow - Medium
-        "../images/EGG_fire3.png",      // Light Green - Strong
-        "../images/EGG_fire4.png",  // Dark Green - Very Strong
+        "../images/EGG_fire1.png",   // Orange - Weak
+        "../images/EGG_fire2.png",   // Yellow - Medium
+        "../images/EGG_fire3.png",   // Light Green - Strong
+        "../images/EGG_fire4.png",   // Dark Green - Very Strong
     ];
 
     let Icon_level = [
-        "bi bi-0-square-fill fs-1",
         "bi bi-1-square-fill fs-1",
         "bi bi-2-square-fill fs-1",
         "bi bi-3-square-fill fs-1",
         "bi bi-4-square-fill fs-1",
+        "bi bi-5-square-fill fs-1",
     ]
 
     if (value.length >= 6) {
@@ -41,6 +42,9 @@ password.oninput = function () {
             }
         });
     }
+    console.log("Saving point to localStorage:", point);
+    localStorage.setItem("passwordStrength", point);
+
     power.style.width = widthPower[point];
     power.style.backgroundColor = colorPower[point];
     strengthImage.src = imageSources[point];
@@ -50,6 +54,7 @@ password.oninput = function () {
     .then(data => {
     help_txt.textContent = data[point].text;
     });
+
 };
 
 
@@ -62,19 +67,33 @@ password.oninput = function () {
             setTimeout(() => {
                 overlay.classList.add("hide");
                 setTimeout(() => {
-                    overlay.style.display = "none"; // Fully remove after fading
+                    overlay.style.display = "none"; 
                 }, 3000);
             }, 2000); 
 
-            localStorage.removeItem("introShown"); // Remove flag after first visit
+            localStorage.removeItem("introShown"); 
         } else {
-            // If the user directly loads index.ejs, remove the overlay immediately
+            
             overlay.style.display = "none";
         }
-    });
+       
+        });
 
 
-
+        document.getElementById("togglePassword").addEventListener("click", function () {
+            let passwordInput = document.getElementById("password");
+        
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                this.classList.remove("bi-eye");
+                this.classList.add("bi-eye-slash"); // Change icon
+            } else {
+                passwordInput.type = "password";
+                this.classList.remove("bi-eye-slash");
+                this.classList.add("bi-eye"); // Change icon back
+            }
+        });
+    
 
 
 

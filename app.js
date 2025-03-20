@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: 'keyboard kat', // Change this to a strong secret
+  secret: 'keyboard cat', 
   resave: false,
   saveUninitialized: true
 }));
