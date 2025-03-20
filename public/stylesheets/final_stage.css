@@ -25,9 +25,14 @@ body {
   }
 
   #strength_img {
-    position: fixed; 
-    z-index: 1002; 
-  }
+    position: fixed;
+    z-index: 1002;
+   
+   top: 200px;
+   left: 350px;
+    align-items: center;
+  }  
+
 
 .group {
     margin-top: 10px;

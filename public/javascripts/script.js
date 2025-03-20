@@ -43,6 +43,7 @@ password.oninput = function () {
         });
     }
     
+    //localStorage.setItem("image", imageSources[point]);
     localStorage.setItem("passwordStrength", point);
     localStorage.setItem("pass", password.value);
 

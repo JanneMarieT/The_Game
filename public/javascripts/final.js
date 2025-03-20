@@ -22,7 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let speed = document.getElementById("Speed");
     let life = document.getElementById("Life");
 
+    let strengthImage = document.getElementById("strength_img");
+
     let pass = localStorage.getItem("pass");
+    let point = localStorage.getItem("passwordStrength")
+    let imageSources = [
+        "../images/EGG_fire.png" ,   // Red - Very Weak
+        "../images/EGG_fire1.png",   // Orange - Weak
+        "../images/EGG_fire2.png",   // Yellow - Medium
+        "../images/EGG_fire3.png",   // Light Green - Strong
+        "../images/EGG_fire4.png",   // Dark Green - Very Strong
+    ];
     
     let widthPower = 
         ["1%", "25%", "50%", "75%", "100%"];
@@ -48,5 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     life.style.width = widthPower[point_length];
     life.style.backgroundColor = colorPower[point_length];
+
+    strengthImage.src = imageSources[point];
 
 });
