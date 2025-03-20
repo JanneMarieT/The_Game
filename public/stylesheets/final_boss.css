@@ -52,21 +52,3 @@ body {
     height: 700px;
     z-index: 500;
   }
-
-  .custom_button {
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: #77bef1ee;
-    width: 100px;
-    height:100px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-  }

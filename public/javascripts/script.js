@@ -42,8 +42,9 @@ password.oninput = function () {
             }
         });
     }
-    console.log("Saving point to localStorage:", point);
+    
     localStorage.setItem("passwordStrength", point);
+    localStorage.setItem("pass", password.value);
 
     power.style.width = widthPower[point];
     power.style.backgroundColor = colorPower[point];
