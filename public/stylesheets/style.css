@@ -175,7 +175,7 @@ input {
 /*form animal*/
 #animalbox {
   position: fixed;
-  top:180px;
+  top: 83px;
   left: 100px;
   width: 900px;
   height: 700px;
@@ -184,14 +184,30 @@ input {
 
 #Level_box {
   position: fixed;
-  top: 80px;
+  top: 450px;
   width:187px;
-  left: 810px;
+  right: 300px;
   height: 80px;
 }
 
+#hashtext{
+  position: fixed;
+  left: 100px;
+  width: 900px;
+  bottom: 50px;
+  Height:80px;
+  
+}
 
+#Character_box {
+  position: fixed;
+  top: 450px;
+  width:300px;
+  right: 500px;
+  height: 80px;
+}
 
+/*
 #carusel_box {
   position: fixed;
   top: 80px;
@@ -201,7 +217,7 @@ input {
   z-index: 500;
 }
 
-/* carousel */
+/* carousel 
 .carousel-item img {
     width: 100%;
     height: auto;
@@ -232,6 +248,30 @@ input {
     opacity: 1;
 }
 #carouselExampleControls {
-max-width: 190px; /* Adjust for egg size(the whole carusel now) */
+max-width: 190px; /* Adjust for egg size(the whole carusel now) 
 margin: auto;
+}*/
+
+#Character_box {
+  padding: 10px;
+}
+
+#Character_box div {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 5px; 
+}
+
+#Character_box div input {
+  margin-right: 8px;
+}
+
+#Character_box > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1px; 
+}
+
+h2.custom_placeholder {
+  margin-bottom: 10px;
 }

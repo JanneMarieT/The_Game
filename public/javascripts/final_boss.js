@@ -10,9 +10,11 @@ document.getElementById("checkPasswordBtn").addEventListener("click", async func
     let isPwned = await checkPassword(password);
     
     if (isPwned) {
-        alert( "❌ Password is in the blacklist!");
+        
+        window.location.href = "/pwnd";
     } else {
-        alert( "✅ Password is safe!");
+        
+        window.location.href = "/safe";
     }
 });
 

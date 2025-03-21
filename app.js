@@ -13,6 +13,8 @@ var guidance = require('./routes/guidance');
 var test = require('./routes/test');
 var final_stage = require('./routes/final_stage');
 var final_boss = require('./routes/final_boss');
+var safe = require('./routes/safe');
+var pwnd = require('./routes/pwnd');
 
 var app = express();
 var session = require('express-session');
@@ -46,6 +48,8 @@ app.use('/guidance', guidance);
 app.use('/test', test);
 app.use('/final_stage', final_stage);
 app.use('/final_boss', final_boss);
+app.use('/safe', safe);
+app.use('/pwnd', pwnd);
 
 
 // catch 404 and forward to error handler

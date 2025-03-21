@@ -9,6 +9,7 @@ body {
     background-size: cover;
     color: #0e0f0f;
     font-size: 20px;
+    position: relative;
   }
 
   .main {
@@ -20,6 +21,8 @@ body {
     width: 500px;
     text-align: center;
     flex-wrap: nowrap;
+    z-index: 10;  
+    position: relative;
   }
 
   .custom_button {
@@ -31,9 +34,10 @@ body {
     color: white;
     cursor: pointer;
     background-color: #77bef1ee;
-    width: 100%;
-    font-size: 16px;
-  }
+   width: 200px;
+}
+
+
 
   #dragon_box{
     position: fixed;
@@ -45,6 +49,8 @@ body {
   }
 
   #final_boss_box{
+    background-color: black !important;
+    color: white;
     position: fixed;
     top: 100px;
     right: 100px;

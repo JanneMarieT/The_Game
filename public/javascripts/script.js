@@ -1,16 +1,25 @@
 
 
+
 //password validation
 let password = document.getElementById("password");
 let power = document.getElementById("power-point");
 let strengthImage = document.getElementById("strength_img");
 let help_txt = document.getElementById("help_text");
 let lv_icon = document.getElementById("level_icon");
+let hashtx = document.getElementById("hashtx");
+
+// Hash password function (outside of oninput)
+//function hashPassword(password) {
+//    let hashedPassword = bcrypt.hashSync(password, 10); 
+//    return hashedPassword;
+//}
 
 
 password.oninput = function () {
     let point = 0;
     let value = password.value;
+    
     let widthPower = 
         ["1%", "25%", "50%", "75%", "100%"];
     let colorPower = 
@@ -42,7 +51,12 @@ password.oninput = function () {
             }
         });
     }
+
+   
     
+    
+    
+
     //localStorage.setItem("image", imageSources[point]);
     localStorage.setItem("passwordStrength", point);
     localStorage.setItem("pass", password.value);
@@ -57,7 +71,41 @@ password.oninput = function () {
     help_txt.textContent = data[point].text;
     });
 
+
+   // let hashedPassword = hashPassword(value);
+    //hashtx.textContent = hashedPassword; 
+    //console.log("Hashed Password:", hashedPassword);
+
 };
+
+//Check boxes!!
+document.getElementById("password").addEventListener("input", function() {
+    const password = this.value;
+    
+    if (/[A-Z]/.test(password)) {
+        document.getElementById("uppercase").checked = true;
+    } else {
+        document.getElementById("uppercase").checked = false;
+    }
+
+    if (/[a-z]/.test(password)) {
+        document.getElementById("lowercase").checked = true;
+    } else {
+        document.getElementById("lowercase").checked = false;
+    }
+
+    if (/\d/.test(password)) {
+        document.getElementById("numbers").checked = true;
+    } else {
+        document.getElementById("numbers").checked = false;
+    }
+
+    if (/[^A-Za-z0-9]/.test(password)) {
+        document.getElementById("special").checked = true;
+    } else {
+        document.getElementById("special").checked = false;
+    }
+});
 
 
 //creates a session - so when refreshing it will not fade in unless you are redirected from intro page
@@ -96,6 +144,6 @@ password.oninput = function () {
             }
         });
     
-
-
+       
+ 
 
