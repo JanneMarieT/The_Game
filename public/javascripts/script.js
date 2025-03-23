@@ -14,6 +14,25 @@ let hashtx = document.getElementById("hashtx");
 //    let hashedPassword = bcrypt.hashSync(password, 10); 
 //    return hashedPassword;
 //}
+    // Define image sources for different strength levels
+    let imageSources_0 = [
+        "../images/EGG_fire.png" ,   
+        "../images/EGG_fire1.png",   
+        "../images/EGG_fire2.png",   
+        "../images/EGG_fire3.png",   
+        "../images/EGG_fire4.png",   
+    ];
+
+    let imageSources_1 = [
+        "../images/EGG_ice.png" ,   
+        "../images/EGG_ice1.png",   
+        "../images/EGG_ice2.png",   
+        "../images/EGG_ice3.png",   
+        "../images/EGG_ice4.png",   
+    ];
+
+let imageSources = Math.random() < 0.5 ? imageSources_0 : imageSources_1;
+localStorage.setItem("Pet", imageSources);
 
 
 password.oninput = function () {
@@ -25,14 +44,6 @@ password.oninput = function () {
     let colorPower = 
         ["#D73F40", "#DC6551", "#F2B84F", "#BDE952", "#3ba62f"];
 
-    // Define image sources for different strength levels
-    let imageSources = [
-        "../images/EGG_fire.png" ,   // Red - Very Weak
-        "../images/EGG_fire1.png",   // Orange - Weak
-        "../images/EGG_fire2.png",   // Yellow - Medium
-        "../images/EGG_fire3.png",   // Light Green - Strong
-        "../images/EGG_fire4.png",   // Dark Green - Very Strong
-    ];
 
     let Icon_level = [
         "bi bi-1-square-fill fs-1",
@@ -56,8 +67,7 @@ password.oninput = function () {
     
     
     
-
-    //localStorage.setItem("image", imageSources[point]);
+    localStorage.setItem("LastDragon", strengthImage.src);
     localStorage.setItem("passwordStrength", point);
     localStorage.setItem("pass", password.value);
 

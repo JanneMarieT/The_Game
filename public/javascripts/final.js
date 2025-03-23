@@ -26,13 +26,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let pass = localStorage.getItem("pass");
     let point = localStorage.getItem("passwordStrength")
-    let imageSources = [
-        "../images/EGG_fire.png" ,   // Red - Very Weak
-        "../images/EGG_fire1.png",   // Orange - Weak
-        "../images/EGG_fire2.png",   // Yellow - Medium
-        "../images/EGG_fire3.png",   // Light Green - Strong
-        "../images/EGG_fire4.png",   // Dark Green - Very Strong
-    ];
+    //let imageSources = localStorage.getItem("image")
+ 
+        // Define image sources for different strength levels
+        let imageSources_0 = [
+            "../images/EGG_fire.png" ,   
+            "../images/EGG_fire1.png",   
+            "../images/EGG_fire2.png",   
+            "../images/EGG_fire3.png",   
+            "../images/EGG_fire4.png",   
+        ];
+    
+        let imageSources_1 = [
+            "../images/EGG_ice.png" ,   
+            "../images/EGG_ice1.png",   
+            "../images/EGG_ice2.png",   
+            "../images/EGG_ice3.png",   
+            "../images/EGG_ice4.png",   
+        ];
+
+        let lastDragon = localStorage.getItem("LastDragon");
+
+        if (lastDragon.includes("EGG_fire")) {
+            imageSources = imageSources_0;
+        } else if (lastDragon.includes("EGG_ice")) {
+            imageSources = imageSources_1;
+        } else {
+            console.error("Error: Could not determine dragon type.");
+        }
     
     let widthPower = 
         ["1%", "25%", "50%", "75%", "100%"];
