@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    let img = document.getElementById("strength_img");
+    let lastDragon = localStorage.getItem("LastDragon");
+    img.src = lastDragon;
+    
+});
+
 
 document.getElementById("checkPasswordBtn").addEventListener("click", async function() {
     let password = localStorage.getItem("pass");

@@ -51,6 +51,19 @@ app.use('/final_boss', final_boss);
 app.use('/safe', safe);
 app.use('/pwnd', pwnd);
 
+const bcrypt = require("bcryptjs");
+
+app.post("/hash-password", async (req, res) => {
+    const { password } = req.body;
+    
+    // Hash the password with bcrypt
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    res.json({ hashedPassword });
+});
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

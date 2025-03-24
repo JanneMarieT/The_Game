@@ -1,6 +1,7 @@
 
 
 
+
 //password validation
 let password = document.getElementById("password");
 let power = document.getElementById("power-point");
@@ -9,11 +10,7 @@ let help_txt = document.getElementById("help_text");
 let lv_icon = document.getElementById("level_icon");
 let hashtx = document.getElementById("hashtx");
 
-// Hash password function (outside of oninput)
-//function hashPassword(password) {
-//    let hashedPassword = bcrypt.hashSync(password, 10); 
-//    return hashedPassword;
-//}
+
     // Define image sources for different strength levels
     let imageSources_0 = [
         "../images/EGG_fire.png" ,   
@@ -62,10 +59,6 @@ password.oninput = function () {
             }
         });
     }
-
-   
-    
-    
     
     localStorage.setItem("LastDragon", strengthImage.src);
     localStorage.setItem("passwordStrength", point);
@@ -82,11 +75,24 @@ password.oninput = function () {
     });
 
 
-   // let hashedPassword = hashPassword(value);
-    //hashtx.textContent = hashedPassword; 
-    //console.log("Hashed Password:", hashedPassword);
 
 };
+
+async function hashPasswordFrontend(password) {
+    const response = await fetch("/hash-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password })
+    });
+
+    const data = await response.json();
+    document.getElementById("hashtx").textContent = data.hashedPassword;
+}
+
+password.addEventListener("input", () => {
+    hashPasswordFrontend(password.value);
+});
+
 
 //Check boxes!!
 document.getElementById("password").addEventListener("input", function() {
@@ -146,11 +152,11 @@ document.getElementById("password").addEventListener("input", function() {
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
                 this.classList.remove("bi-eye");
-                this.classList.add("bi-eye-slash"); // Change icon
+                this.classList.add("bi-eye-slash"); 
             } else {
                 passwordInput.type = "password";
                 this.classList.remove("bi-eye-slash");
-                this.classList.add("bi-eye"); // Change icon back
+                this.classList.add("bi-eye"); 
             }
         });
     
