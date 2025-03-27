@@ -28,7 +28,25 @@ let hashtx = document.getElementById("hashtx");
         "../images/EGG_ice4.png",   
     ];
 
-let imageSources = Math.random() < 0.5 ? imageSources_0 : imageSources_1;
+    let imageSources_2 = [
+        "../images/EGG_forrest.png" ,   
+        "../images/EGG_forrest1.png",   
+        "../images/EGG_forrest2.png",   
+        "../images/EGG_forrest3.png",   
+        "../images/EGG_forrest4.png",   
+    ];
+
+    let imageSources_3 = [
+        "../images/EGG_water.png" ,   
+        "../images/EGG_water1.png",   
+        "../images/EGG_water2.png",   
+        "../images/EGG_water3.png",   
+        "../images/EGG_water4.png",   
+    ];
+
+    let imageSourcesArray = [imageSources_0, imageSources_1, imageSources_2, imageSources_3];
+let imageSources = imageSourcesArray[Math.floor(Math.random() * imageSourcesArray.length)];
+//let imageSources = Math.random() < 0.5 ? imageSources_0 : imageSources_1;
 localStorage.setItem("Pet", imageSources);
 
 

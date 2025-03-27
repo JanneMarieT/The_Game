@@ -2,6 +2,7 @@ function checkPasswordStrength() {
     let point = localStorage.getItem("passwordStrength");
     let toastpet = document.getElementsByClassName("PetToast")[0];
     let overlay = document.getElementById("overlay");
+    let toast_cont = document.querySelector(".toast-container");
     //let toast_cont = document.getElementsByClassName("toast-container");
 
     //let mainContent = document.getElementById("main-content");
@@ -12,14 +13,14 @@ function checkPasswordStrength() {
 
     console.log("Password Strength on final_stage:", point);
 
-    if (point < 1) {
+    if (point < 2) {
         toastpet.classList.add("show");
         imgElement.src = imageSources[point];
        // overlay.style.display = "block";
         overlay.classList.add("overlay"); 
     }else {
         toastpet.classList.remove("show");
-        //toast_cont.classList.remove("show"); 
+        toast_cont.classList.remove("toast-container"); 
         //overlay.style.display = "none"; // Hide overlay
         overlay.classList.remove("overlay"); 
     }
@@ -56,12 +57,33 @@ document.addEventListener("DOMContentLoaded", function () {
             "../images/EGG_ice4.png",   
         ];
 
+        
+    let imageSources_2 = [
+        "../images/EGG_forrest.png" ,   
+        "../images/EGG_forrest1.png",   
+        "../images/EGG_forrest2.png",   
+        "../images/EGG_forrest3.png",   
+        "../images/EGG_forrest4.png",   
+    ];
+
+    let imageSources_3 = [
+        "../images/EGG_water.png" ,   
+        "../images/EGG_water1.png",   
+        "../images/EGG_water2.png",   
+        "../images/EGG_water3.png",   
+        "../images/EGG_water4.png",   
+    ];
+
         let lastDragon = localStorage.getItem("LastDragon");
 
         if (lastDragon.includes("EGG_fire")) {
             imageSources = imageSources_0;
         } else if (lastDragon.includes("EGG_ice")) {
             imageSources = imageSources_1;
+        } else if (lastDragon.includes("EGG_forrest")) {
+            imageSources = imageSources_2;
+        } else if (lastDragon.includes("EGG_water")) {
+            imageSources = imageSources_3;
         } else {
             console.error("Error: Could not determine dragon type.");
         }
