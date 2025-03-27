@@ -1,6 +1,10 @@
 function checkPasswordStrength() {
     let point = localStorage.getItem("passwordStrength");
     let toastpet = document.getElementsByClassName("PetToast")[0];
+    let overlay = document.getElementById("overlay");
+    //let toast_cont = document.getElementsByClassName("toast-container");
+
+    //let mainContent = document.getElementById("main-content");
     //toastpet.classList.add("show");
     if (point === null) {
         point = 0;
@@ -11,6 +15,13 @@ function checkPasswordStrength() {
     if (point < 1) {
         toastpet.classList.add("show");
         imgElement.src = imageSources[point];
+       // overlay.style.display = "block";
+        overlay.classList.add("overlay"); 
+    }else {
+        toastpet.classList.remove("show");
+        //toast_cont.classList.remove("show"); 
+        //overlay.style.display = "none"; // Hide overlay
+        overlay.classList.remove("overlay"); 
     }
 }
 checkPasswordStrength();
@@ -83,3 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
     strengthImage.src = imageSources[point];
 
 });
+
+function showToast() {
+    document.getElementById("overlay").style.display = "block"; // Show overlay
+    document.body.classList.add("grayscale"); // Make page black & white
+    document.getElementById("toast").style.display = "block"; // Show toast
+}
+
+function hideToast() {
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
+    document.body.classList.remove("grayscale"); // Restore normal colors
+    document.getElementById("toast").style.display = "none"; // Hide toast
+}

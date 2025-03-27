@@ -26,82 +26,6 @@
 <!-----------password strength meter----------->
 
 <!-----------animalbox------------------------->
-  <!-- <div class="main" id="carusel_box">-->
-     <!--   <section id="carusel_box" class="main text-center">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="./images/eggis11.png" alt="Egg0">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="./images/eggis1.png" alt="Egg1">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="./images/eggis2.png" alt="Egg2">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="./images/eggis3.png" alt="Egg3">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="./images/eggis4.png" alt="Egg4">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="./images/eggis5.png" alt="Egg5">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img  src="./images/eggis6.png" alt="Egg6">
-                            </div>
-                            <div class="col-md-4">
-                                <img  src="./images/eggis7.png" alt="Egg7">
-                            </div>
-                            <div class="col-md-4">
-                                <img  src="./images/eggis8.png" alt="Egg5">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img  src="./images/eggis9.png" alt="Egg6">
-                            </div>
-                            <div class="col-md-4">
-                                <img  src="./images/eggis10.png" alt="Egg7">
-                            </div>
-                            <div class="col-md-4">
-                                <img  src="./images/eggis12.png" alt="Egg5">
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-            
-        
-                <!-- Navigation Buttons -->
-                <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>-->
-    
-
-
-    <!-- Image & Text Below the Carousel -->
     <div class="main" id="animalbox">
         <section>
             <div class="mt-4 text-center">
@@ -135,21 +59,20 @@
         </section>
         <section class="main" id="Character_box">
             <div class="">
-               <!-- <h2 class="custom_placeholder me-3">Characters:</h2>-->
                 <div>
-                    <input type="checkbox" id="uppercase" name="uppercase" />
+                    <input type="checkbox" id="uppercase" name="uppercase" disabled/>
                     <label for="uppercase">Include Uppercase</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="lowercase" name="lowercase" />
+                    <input type="checkbox" id="lowercase" name="lowercase" disabled/>
                     <label for="lowercase">Include Lowercase</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="numbers" name="numbers" />
+                    <input type="checkbox" id="numbers" name="numbers" disabled/>
                     <label for="numbers">Include Numbers</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="special" name="special" />
+                    <input type="checkbox" id="special" name="special" disabled/>
                     <label for="special">Include Special Characters</label>
                 </div>
             </div>
@@ -168,11 +91,11 @@
                 
                     <form action="/index" method="POST">
                         <!--<label for="first">Username:</label>-->
-                        <input type="text" id="first" name="username" placeholder="Enter your Username" required>
+                        <input type="text" id="first" name="username" placeholder="Username" required>
                         <p></p>
                         <!--<label for="password">Password:</label>-->
                         <div class="password-container">
-                            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
                             <i class="bi bi-eye eye-icon" id="togglePassword"></i>
                         </div>
                     
