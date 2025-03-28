@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="/stylesheets/intro.css">
 </head>
 <body>
-    <div class="text_box">
-        
-    </div>
+<!--   <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="game-container">--> 
+    <div class="text_box"></div>
     
     <audio id="backgroundAudio" loop>
         <source src="./images/intro_2.mp3" type="audio/mp3">
@@ -17,7 +19,7 @@
     </audio>
     <button id="soundToggle" class="sound-btn">🔊</button>
     
-    <!-- Volume slider +hidden-slider -->
+ <!-- Volume slider wrapped in hidden-slider div -->
 <div class="hidden-slider">
     <input type="range" id="volumeSlider" min="0" max="100" step="1" value="100">
 </div>
@@ -34,6 +36,11 @@
 
         </div>
         </div>
+
+ <!--      </div>
+        </div>
+        </div>
+        </div>--> 
         <script src="/javascripts/intro.js"></script>
         
 <!------------lottie butterfly------------>
