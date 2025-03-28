@@ -13,7 +13,7 @@ function checkPasswordStrength() {
 
     console.log("Password Strength on final_stage:", point);
 
-    if (point < 2) {
+    if (point < 3) {
         toastpet.classList.add("show");
         imgElement.src = imageSources[point];
        // overlay.style.display = "block";

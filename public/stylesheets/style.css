@@ -254,6 +254,7 @@ margin: auto;
 
 #Character_box {
   padding: 10px;
+  pointer-events: none;
 }
 
 #Character_box div {

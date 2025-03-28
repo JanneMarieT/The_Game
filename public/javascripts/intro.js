@@ -22,7 +22,7 @@ const text = "Ready to embark on a legendary quest to protect your digital kingd
         if (i < text.length) {
             document.getElementById("typewriter").innerHTML += text.charAt(i);
             i++;
-           setTimeout(type, 50); 
+           setTimeout(type, 30); 
         }
     }
 
