@@ -10,6 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
    
@@ -22,9 +23,9 @@
 <section>
     <div class="main" id="final_stage_box">
         <form>
-            <h1 class="custom_placeholder">Congratulations on creating a password pet!</h1>
+            <h1 class="custom_placeholder">Congratulations on creating a Password Pet!</h1>
             <div class="main group">
-                <label for="">Strength of password</label>
+                <label for="">Strength</label>
                 <div class="power-container">
                     <div id="Strength">
                     </div>
@@ -32,7 +33,7 @@
             </div>
            
             <div class="main group">
-                <label for="">Speed of password</label>
+                <label for="">Speed</label>
                 <div class="power-container">
                     <div id="Speed">
                     </div>
@@ -40,7 +41,7 @@
             </div>
             
             <div class="main group">
-                <label for="">Stanima of password</label>
+                <label for="">Stanima</label>
                 <div class="power-container">
                     <div id="Stanima">
                     </div>
@@ -48,13 +49,24 @@
             </div>
             
             <div class="main group">
-                <label for="">Life expectency password</label>
+                <label for="">Spirit</label>
                 <div class="power-container">
-                    <div id="Life">
+                    <div id="Spirit">
                     </div>
                 </div>
             </div>
         </form>
+        <div class="stats-container">
+        <div id="Life">
+            <label for="">Life</label>
+            <p id="countdown">0d 0h 0m 0s</p>
+        </div>
+        <div id="points">
+            <label for="">Score</label>
+            <p id="score">000</p>
+        </div>
+    </div>
+
         <h3>Will your password pet survive in the wild?</h3>
         <a href="/final_boss">
             <button class="custom_button">Play</button>
