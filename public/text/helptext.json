@@ -1,17 +1,17 @@
 {
     "0": {
-        "text":"To make a password les guessable and more secure against brute force attacks, and dictionary attacks the number of characters must be at least above 8! How long a password can you make and still remmember?"  
+        "text":"To make a password less guessable and more secure against brute force attacks, the number of characters must be at least above 8! How long a password can you make and still remember?"  
     },
     "1": {
-        "text":"Make atleast one character capital! To avoid bad habits of capitalising only the first letter, try to use more than one capital letter and implement them into the password word or words. for example: BlueBerries"
+        "text":"Make at least one character capital! To avoid the bad habit of capitalizing only the first letter, try to use more than one capital letter and implement it into the password. Example: BlueBerries"
     },
     "2": {
-        "text":"Great, keep up the good work! Lets add in a number and remmember to not use anything date specific! Instead try and implement a number into the context of you choosen password, for example: Blu3Berries"
+        "text":"Great, keep up the good work! Let's add a number and remember not to use anything date specific! Instead try and implement a number into the context of your chosen password, Example: Blu3Berries"
     },
     "3": {
-        "text":"Wow look at your dragon! its growing big! Now can you add in an special character? Here an easy way of implementing special characters is to use one or two that somewhat looks like a character in your chosen word or string. For example: Blu3Berr!es "
+        "text":"Wow, look at your dragon! It's growing big! Now can you add in a special character? Here an easy way of implementing special characters is to use one or two that somewhat look like a character in your chosen word or string. Example: Blu3Berr!es"
     },
     "4": {
-        "text":"CONGRATULATION! Your Pet dragon has reached full maturity and are now at final stage! Press the submit button and test your ability to remmember the password you have choosen"
+        "text":"CONGRATULATION! Your Pet dragon has reached full maturity and is now at the final stage! Press the submit button and test your ability to remember the password you have chosen."
     }
 }
