@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/*
+
 document.getElementById("checkPasswordBtn").addEventListener("click", async function() {
     let password = localStorage.getItem("pass");
 
@@ -17,14 +17,12 @@ document.getElementById("checkPasswordBtn").addEventListener("click", async func
     }
 
     let isPwned = await checkPassword(password);
+    console.log(isPwned)
     
     if (isPwned) {
-       alert("✅ You are safe! Well done on creating a secure password!");
-
-       // window.location.href = "/pwnd";
+        window.location.href = "/pwnd";
     } else {
-        alert("❌ You've been pwned! Hurry up and change your password!");
-       // window.location.href = "/safe";
+        window.location.href = "/safe";
     }
 });
 
@@ -39,7 +37,7 @@ async function checkPassword(password) {
 
     return data.includes(suffix);
 }
-  */  
+/*
 document.querySelectorAll(".custom_button").forEach(button => {
     button.addEventListener("click", async function() {
         let password = localStorage.getItem("pass");
@@ -90,28 +88,28 @@ async function checkPwnedPasswords(prefix, suffix){
     return data.includes(suffix);
 }
 
-
-// Function to check if the password is leaked using the ProxyNova API
 async function checkProxyNovaPassword(password) {
     try {
         // Querying ProxyNova for breached passwords using a query of just the password
         const response = await fetch(`https://api.proxynova.com/comb?query=${encodeURIComponent(password)}&start=0&limit=15`);
-        console.log(response)
+        console.log(response);
         const data = await response.json();
-        console.log(data)
+        console.log(data);
 
-        if (!data.lines) {
-            console.error("No lines found in API response.");
-            return false;
-        }
-        else{
-            return true;
+        // Check if there are any entries in the 'lines' array
+        if (!data.lines || data.lines.length === 0) {
+            console.log("No breach found for password.");
+            return false; // No breach found
+        } else {
+            console.log("Password found in breach:", data.lines);
+            return true; // Password found in breach
         }
     } catch (error) {
         console.error("ProxyNova Error:", error);
-        return false;
+        return false; // Error handling, return false
     }
 }
+
 async function checkRockyou(password) {
     try {
         console.log("Sending password:", password); 
@@ -144,5 +142,5 @@ async function checkRockyou(password) {
         alert('An error occurred while checking the password.');
         return false; // Assume not blacklisted if there's an error
     }
-}
+}*/
 

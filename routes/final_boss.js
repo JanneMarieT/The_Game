@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const fs = require('fs');
-const path = require('path');
+//const fs = require('fs');
+//const path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,27 +9,6 @@ router.get('/', function(req, res, next) {
 });
 
 /*
-router.post('/', (req, res) => {
-  const password = req.body.password;
-  console.log("we are here", password)
-  if (!password) {
-      return res.status(400).json({ success: false, message: 'Password is required.' });
-  }
-
-  // Read rockyou.txt and check if password is present
-  fs.readFile(path.join(__dirname, 'text', 'rockyou.txt'), 'utf-8', (err, data) => {
-      if (err) {
-          return res.status(500).json({ success: false, message: 'Error reading the blacklist file.' });
-      }
-      const blacklist = new Set(data.split('\n').map(line => line.trim()));
-      if (blacklist.has(password)) {
-          return res.json({ success: true, isBlacklisted: true });
-      } else {
-          return res.json({ success: true, isBlacklisted: false });
-      }
-  });
-});
-*/
 router.post('/', (req, res) => { 
   console.log("✅ Request received at /final_boss");
   console.log("Body received:", req.body); 
@@ -57,11 +36,7 @@ router.post('/', (req, res) => {
 
       return res.json({ success: true, isBlacklisted });
   });
-});
-
-
-
-
+});*/
 
 
 
