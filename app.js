@@ -18,7 +18,7 @@ var pwnd = require('./routes/pwnd');
 
 var app = express();
 var session = require('express-session');
-app.use(express.urlencoded({ extended: true })); // Middleware to parse form data
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
 
 // view engine setup
@@ -62,8 +62,6 @@ app.post("/hash-password", async (req, res) => {
 
     res.json({ hashedPassword });
 });
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

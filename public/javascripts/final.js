@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
         let lastDragon = localStorage.getItem("LastDragon");
+        console.log(lastDragon)
 
         if (lastDragon.includes("EGG_fire")) {
             imageSources = imageSources_0;
@@ -108,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
     spirit.style.backgroundColor = colorPower[point_length];
 
     strengthImage.src = imageSources[point];
+    localStorage.setItem("Dragon", imageSources[point]);
+
 
 });
 
