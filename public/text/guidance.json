@@ -1,21 +1,56 @@
 {
     "0": {
-        "text":"Welcome to Password Pet! Here we will guide you on tips and tricks to better secure yourself and your data, outside and inside the World Wide Web! "  
+        "text":"Welcome to Password Pet!"  
     },
-    
     "1": {
-        "text":"What makes a password great? most of the time it's a password that is easy to remember, but at the same time not guessable, meaning strong and secure."  
+        "text":"Here we will guide you on tips and tricks to better secure yourself and your data, outside and inside the World Wide Web! "  
     },
     "2": {
-        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim arcu vel placerat pulvinar. Sed justo orci, consequat eget auctor id, sagittis a elit. Suspendisse vel enim massa. Curabitur vitae nibh ultrices, ultricies lorem in, finibus odio. Integer ultrices lectus sit amet risus fermentum, nec rhoncus urna aliquet. Ut tincidunt, lectus nec pharetra scelerisque, turpis ligula pulvinar nibh, ac scelerisque dolor nulla sit amet sapien. Morbi nec ligula egestas, consequat purus at, sollicitudin est. Integer facilisis, eros at ornare pretium, enim tellus maximus nibh, vitae rhoncus enim dolor ultricies risus. Vestibulum vestibulum mattis quam, vel fermentum turpis fringilla id. Quisque rutrum vel massa non sagittis. Nulla facilisi. Vestibulum elit enim, vulputate eu turpis hendrerit, efficitur laoreet ipsum. Vestibulum elementum diam porttitor dapibus semper. Sed lorem nulla, efficitur sit amet lectus eget, pharetra varius lacus. Nulla malesuada molestie tempus."  
+        "text":"------------------------------How to Play------------------------------"  
     },
     "3": {
-        "text":"Win or Lose, but most importantly, learn something new and stay vigilant, Enjoy!"  
+        "text":"When you arrive on the homepage, you'll meet your very own dragon from a randomly chosen egg. This egg will start to hatch and grow every time you type a character into the password field."  
     },
     "4": {
-        "text":"Cheers from Group 24!"  
+        "text":"To level up your pet and help it evolve into a full-grown dragon, your password needs to include the following:"  
     },
     "5": {
-        "text":"B"  
+        "text":"A special character: !\"#¤%&/()=?\\"  
+    },
+    "6": {
+        "text":"A number: 0-9"  
+    },
+    "7": {
+        "text":"At least one capital letter: A-Z"  
+    },
+    "8": {
+        "text":"A minimum length of 8 characters"  
+    },
+    "9": {
+        "text":"The more of these elements you include, the stronger your password — and the stronger your password pet becomes!"  
+    },
+    "10": {
+        "text":"--------------------Pro Tips for a Strong Password--------------------"  
+    },
+    "11": {
+        "text":"Creating a strong password is great — but remembering it is just as important. Here are a few tips:"
+    },  
+    "12": {
+        "text":"Use phrases or combinations of words that are meaningful to you"
+    },  
+    "13": {
+        "text":"Avoid personal info like birth dates, pet names, or addresses — these are easy to guess or find online" 
+    }, 
+    "14": {
+        "text":"Try using substitutions, like numbers or symbols in place of letters"
+    },  
+    "15": {
+        "text":"--------------------Final Challenge: The Boss Battle!--------------------"  
+    },  
+    "16": {
+        "text":"Once you've built your best password, head to the final page and test it against the Boss. Will your password be strong enough to survive the fight?"  
+    },  
+    "17": {
+        "text":"Have fun, stay curious, and keep your passwords powerful!"  
     }
 }

@@ -1,21 +1,35 @@
 {
     "0": {
-        "text":"Welcome to Password Pet! This is a password strength meter, designed with gamification in order to get users to have fun while learning how to make better, stronger and more secure passwords! "  
+        "text":"Welcome to Password Pet!"  
     },
-    
     "1": {
-        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim arcu vel placerat pulvinar. Sed justo orci, consequat eget auctor id, sagittis a elit. Suspendisse vel enim massa. Curabitur vitae nibh ultrices, ultricies lorem in, finibus odio. Integer ultrices lectus sit amet risus fermentum, nec rhoncus urna aliquet. Ut tincidunt, lectus nec pharetra scelerisque, turpis ligula pulvinar nibh, ac scelerisque dolor nulla sit amet sapien. Morbi nec ligula egestas, consequat purus at, sollicitudin est. Integer facilisis, eros at ornare pretium, enim tellus maximus nibh, vitae rhoncus enim dolor ultricies risus. Vestibulum vestibulum mattis quam, vel fermentum turpis fringilla id. Quisque rutrum vel massa non sagittis. Nulla facilisi. Vestibulum elit enim, vulputate eu turpis hendrerit, efficitur laoreet ipsum. Vestibulum elementum diam porttitor dapibus semper. Sed lorem nulla, efficitur sit amet lectus eget, pharetra varius lacus. Nulla malesuada molestie tempus."  
+        "text":"This is a password strength meter — but with a twist. We've added a layer of gamification to make learning about password security not just informative, but fun! "  
     },
     "2": {
-        "text":"Lorem ipsum dolor sit amet."  
+        "text":"Our goal is to help users build better, stronger, and more secure passwords in an engaging and memorable way. "  
     },
     "3": {
-        "text":"So, in the end, what we wanted was to develop a password strength meter, that would help guide users along the way on their path. An easy tool for users to explore in a safe space with a friend along the way, and to see the possibilities. Learn why it is important, and most importantly how to make strong and secure passwords and to remember them and use them in the wild. "  
+        "text":"Password strength meters are a helpful tool on the web, offering users a visual guide to how secure their passwords are. "  
     },
     "4": {
-        "text":"Win or Lose, but most importantly, learn something new and stay vigilant, Enjoy!"  
+        "text":"We wanted to take that concept further — to create an interactive space where users can explore, learn, and understand not only why strong passwords matter, but also how to create ones that are both secure and easy to remember."  
     },
     "5": {
+        "text":"And what better way to do that than with a game?"  
+    },
+    "6": {
+        "text":"Games are a powerful way to learn. They invite curiosity, encourage experimentation, and make complex ideas easier to grasp. With Password Pet, we wanted to design a playful experience — a safe, judgment-free space where users can test their password skills, get real-time feedback, and even have a little companion along the way."  
+    },
+    "7": {
+        "text":"In the end, our goal was simple: to develop a tool that guides users on their journey to better password habits."  
+    },
+    "8": {
+        "text":"Whether you win or lose, the most important thing is to learn something new — and leave better prepared to stay safe out there on the web."  
+    },
+    "9": {
+        "text":"Enjoy the journey, and stay vigilant."  
+    },
+    "10": {
         "text":"Cheers from Group 24!"  
     }
 }

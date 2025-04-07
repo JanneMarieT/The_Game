@@ -47,7 +47,11 @@ body {
 }
 
 p{
-    font-size: 18px;
+    font-size: 17px;
+}
+
+#white{
+  color: blue;
 }
 
 /*butterfly*/
