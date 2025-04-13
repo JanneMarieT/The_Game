@@ -21,3 +21,21 @@
     cursor: pointer;
     z-index: 1000;
   }
+
+  
+.hidden-slider {
+    position: fixed;
+    bottom: 5px;
+    left: 20px;
+    width: 100px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;  
+  }
+  
+  .sound-btn:hover + .hidden-slider,
+  .hidden-slider:hover {
+    opacity: 1;  
+    pointer-events: auto;  
+    z-index: 1001;  
+  }

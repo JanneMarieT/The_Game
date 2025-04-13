@@ -3,8 +3,9 @@ window.onload = function() {
 };
 
 //audio
-let audio = document.getElementById("backgroundAudio");
+        let audio = document.getElementById("backgroundAudio");
         let soundBtn = document.getElementById("soundToggle");
+        let volumeSlider = document.getElementById("volumeSlider");
         let isPlaying = false;
     
         soundBtn.addEventListener("click", function () {
@@ -16,4 +17,15 @@ let audio = document.getElementById("backgroundAudio");
                 soundBtn.textContent = "🔇"; 
             }
             isPlaying = !isPlaying;
+        });
+ 
+        volumeSlider.addEventListener("input", function () {
+            audio.volume = this.value / 100; 
+        
+           
+            if (audio.paused && audio.volume > 0) {
+                audio.play();
+                isPlaying = true;
+                soundToggle.textContent = "🔊";
+            }
         });
