@@ -171,18 +171,18 @@ input {
   height:320px;
   z-index: 500; 
 }
-/* Tail sticking out horizontally to the right */
+/*form helptext-tail*/
 #helptx::after {
   content: "";
   position: absolute;
   top: 20%;
-  right: -30px; /* places tail outside the right edge */
+  right: -30px;
   transform: translateY(-50%);
   width: 0;
   height: 0;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
-  border-left: 30px solid white; /* tail points right, matches box color */
+  border-left: 30px solid white; 
 }
 /*form animal*/
 #animalbox {
