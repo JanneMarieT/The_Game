@@ -83,17 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error: Could not determine dragon type.");
         }
     
-    let widthPower = 
-        ["1%", "25%", "50%", "75%", "100%"];
-    let colorPower = 
-        ["#D73F40", "#DC6551", "#F2B84F", "#BDE952", "#3ba62f"];
+      widthPower = ["1%", "20%", "40%", "60%", "80%", "100%"];
+      colorPower = ["#FF3B30", "#FF9500", "#FFCC00", "#B4E900", "#15cf1c", "#138018"];
+
+
     
 
-        let point_length = Math.min(pass.length - 7, 4);
+        let point_length = Math.min(pass.length - 7, 5);
         console.log("length", point_length)
-        let point_speed = Math.min((pass.match(/\d/g) || []).length, 4); 
-        let point_stamina = Math.min((pass.match(/[^a-zA-Z0-9]/g) || []).length, 4); 
-        let point_strength = Math.min((pass.match(/[A-Z]/g) || []).length, 4);
+        let point_speed = Math.min((pass.match(/\d/g) || []).length, 5); 
+        let point_stamina = Math.min((pass.match(/[^a-zA-Z0-9]/g) || []).length, 5); 
+        let point_strength = Math.min((pass.match(/[A-Z]/g) || []).length, 5);
            
 
     strength.style.width = widthPower[point_strength];

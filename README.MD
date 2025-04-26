@@ -80,5 +80,6 @@ _A detailed description of what the Password Pet application does - and how it m
 
 ## Contributing
 This is a school assignment for studio2 in cyber security
-ME + my group :) :butterfly: 
+
+Group 24 :) :butterfly: 
 **Signed: Janne Marie Tvetene**
