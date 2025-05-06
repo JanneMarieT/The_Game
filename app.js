@@ -15,6 +15,7 @@ var final_stage = require('./routes/final_stage');
 var final_boss = require('./routes/final_boss');
 var safe = require('./routes/safe');
 var pwnd = require('./routes/pwnd');
+var admin = require('./routes/admin');
 
 var app = express();
 var session = require('express-session');
@@ -29,9 +30,11 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.use(session({
   secret: 'keyboard cat', 
@@ -50,6 +53,7 @@ app.use('/final_stage', final_stage);
 app.use('/final_boss', final_boss);
 app.use('/safe', safe);
 app.use('/pwnd', pwnd);
+app.use('/admin', admin);
 
 const bcrypt = require("bcryptjs");
 
